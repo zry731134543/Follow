@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    >
+
+    <FrameLayout
+        android:id="@+id/Fragment"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_weight="1" >
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#cecece" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" 
+        android:background="#fff">
+
+        <RadioButton
+            android:id="@+id/btn3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#00000000"
+            android:button="@null"
+            android:layout_marginTop="2dp"
+            android:checked="true"
+            android:drawableTop="@drawable/pedometer"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/pedometer"
+            android:textColor="@drawable/selector_color"
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/btn4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#00000000"
+            android:button="@null"
+            android:layout_marginTop="2dp"
+            android:checked="true"
+            android:drawableTop="@drawable/sj_danmu"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/danmu"
+            android:textColor="@drawable/selector_color"
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/btn5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginTop="2dp"
+            android:background="#00000000"
+            android:button="@null"
+            android:drawableTop="@drawable/me"
+            android:gravity="center"
+            android:text="@string/wo"
+            android:textColor="@drawable/selector_color"
+            android:textSize="12sp" />
+    </RadioGroup>
+
+</LinearLayout>

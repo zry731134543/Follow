@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/title_pedometer"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="left"
+            android:layout_marginLeft="10dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/selector_image" />
+
+        <TextView
+            android:id="@+id/sport"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/sport"
+            android:textColor="#6DCAEC"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="left"
+            android:layout_marginLeft="10dp"
+            android:contentDescription="@string/app_name" />
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        />
+     
+   <com.example.jun.CircleBar
+        android:id="@+id/circle"
+        android:layout_marginTop="60dp"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:clickable="true" />
+   
+     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/circle"
+        android:layout_marginLeft="15dip"
+        android:layout_marginRight="15dip"
+        android:layout_marginTop="60dip"
+        android:background="@drawable/shape"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:paddingBottom="10dip"
+        android:paddingLeft="15dip"
+        android:paddingRight="15dip"
+        android:paddingTop="10dip" >
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <TextView
+                style="@style/small_text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/use_time" />
+
+            <TextView
+                android:id="@+id/timer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textColor="@android:color/white"
+                android:textSize="25sp" />
+        </LinearLayout>
+
+        <TableLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:paddingLeft="5dip"
+            android:paddingRight="5dip"
+            android:stretchColumns="1" >
+
+            <TableRow
+                android:id="@+id/hide1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    style="@style/small_text_style"
+                    android:text="@string/distance" />
+
+                <TextView
+                    android:id="@+id/distance"
+                    style="@style/small_text_style"
+                    android:gravity="right" />
+
+                <TextView
+                    style="@style/small_text_style"
+                    android:gravity="right"
+                    android:text="@string/km" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    style="@style/small_text_style"
+                    android:text="@string/calories" />
+
+                <TextView
+                    android:id="@+id/calories"
+                    style="@style/small_text_style"
+                    android:gravity="right" />
+
+                <TextView
+                    style="@style/small_text_style"
+                    android:gravity="right"
+                    android:text="卡" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/hide2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    style="@style/small_text_style"
+                    android:text="@string/velocity" />
+
+                <TextView
+                    android:id="@+id/velocity"
+                    style="@style/small_text_style"
+                    android:gravity="right" />
+
+                <TextView
+                    style="@style/small_text_style"
+                    android:gravity="right"
+                    android:text="@string/kilometer_per_hour" />
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+     
+</LinearLayout>
+ 

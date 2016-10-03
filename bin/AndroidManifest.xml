@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.followme"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="19"
+        android:targetSdkVersion="19" />
+    <!-- 震动权限 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" >
+    </uses-permission>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        >
+        <receiver android:name="com.example.zry.broadcast.BootCompletedReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" >
+                </action>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.example.wo.AlarmReceiver"
+            android:process=":remote" >
+        </receiver>
+
+        <service android:name=".DataLayerListenerService" >
+            <intent-filter>
+                <action android:name="com.mobvoi.android.wearable.BIND_LISTENER" />
+            </intent-filter>
+        </service>
+        <service android:name="com.example.zry.service.GetSetpService" >
+        </service>
+        <service android:name="com.example.zry.service.RemindService" >
+        </service>
+e
+        <activity
+            android:name="com.example.sj.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.wo.Historcal" >
+        </activity>
+        <activity android:name="com.example.wo.Exercise" >
+        </activity>
+        <activity android:name="com.example.wo.Goals" >
+        </activity>
+        <activity android:name="com.example.wo.Setting" >
+        </activity>
+        <activity
+            android:name="com.example.wo.SettingTime"
+            android:label="@string/title_activity_setting_time" >
+        </activity>
+    </application>
+
+</manifest>
